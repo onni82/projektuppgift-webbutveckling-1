@@ -34,43 +34,45 @@
         <header>
             <a href="/" aria-label="Home page"><img src="/images/logo-big.png" alt="" height="36" /></a>
             <ul>
-                <li><a href="/">Work Experience</a></li>
-                <li><a href="/education/">Education</a></li>
-                <li><a aria-current="page" href="/skills/">Skills</a></li>
+                <li><a class="index" href="/">Work Experience</a></li>
+                <li><a class="education" href="/education/">Education</a></li>
+                <li><a class="skills" aria-current="page" href="/skills/">Skills</a></li>
             </ul>
         </header>
         <div id="page">
             <h1>Skills</h1>
             <section>
-                <p className="subcategory">Media Skills</p>
+                <p class="subcategory">Media Skills</p>
                 <p>Music writing, lyric writing, audio engineering &amp; music production</p>
             </section>
             <section>
-                <p className="subcategory">Languages</p>
+                <p class="subcategory">Languages</p>
                 <p>English, Swedish &amp; some Korean</p>
             </section>
-            <Header headerText="Tools" />
+            <h1>Tools</h1>
             <section>
-                <p className="subcategory">Operative Systems</p>
+                <p class="subcategory">Operative Systems</p>
                 <p>Windows, macOS, Ubuntu (Desktop &amp; Server)</p>
             </section>
             <section>
-                <p className="subcategory">Text/Code Editors</p>
+                <p class="subcategory">Text/Code Editors</p>
                 <p>Visual Studio, Sublime Text, Code::Blocks</p>
             </section>
             <section>
-                <p className="subcategory">Digital Audio Workstations</p>
+                <p class="subcategory">Digital Audio Workstations</p>
                 <p>Avid Pro Tools, Image-Line FL Studio, Apple Logic Pro</p>
             </section>
             <section>
-                <p className="subcategory">Video Editing Software</p>
+                <p class="subcategory">Video Editing Software</p>
                 <p>Adobe Premiere Pro, Avid Media Composer, Apple Final Cut Pro</p>
             </section>
         </div>
-            <footer id="footer">
-                <p>&copy; 2024 <span className="blacktext">Onni Bucht</span></p>
-                <a href="/contact/">Contact</a>
-            </footer>
-        </div>
+        <footer id="footer">
+            <p>&copy; 2024 <span class="blacktext">Onni Bucht</span></p>
+            <a class="contact" href="/contact/">Contact</a>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="/scripts/global.js"></script>
 </body>
 </html>
