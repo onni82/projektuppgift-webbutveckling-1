@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	// Hanterar klickhändelsen på ett a-element som har klassen "clickable"
-	$('a.clickable').click(function (event) {
+	// Hanterar klickhändelsen på ett a-element
+	$('a').click(function (event) {
 		event.preventDefault();
 
 		// Tar bort aria-current="page" från alla a-element
@@ -9,8 +9,8 @@ $(document).ready(function () {
 		// Lägger till aria-current="page" på det klickade a-elementet
 		$(this).attr('aria-current', 'page');
 
-		// Hämtar den andra klassen från det klickade elementet som motsvarar länken
-		var className = $(this).attr('class').split(" ")[1];
+		// Hämtar klassen från det klickade elementet
+		var className = $(this).attr('class');
 
 		// Skapar sökvägen till filen baserat på klassnamn
 		var filePath = className + '.html';
@@ -27,13 +27,8 @@ $(document).ready(function () {
 			$("#page").html(specificContent);
 
 			// Updatera URL:en utan att ladda om sidan
-			if (className == "index") {
-				var newUrl = window.location.protocol + "//" + window.location.host + "/";
-				history.pushState({ path: newUrl }, '', newUrl);
-			} else {
-				var newUrl = window.location.protocol + "//" + window.location.host + "/" + className + ".html";
-				history.pushState({ path: newUrl }, '', newUrl);
-			}
+			var newUrl = window.location.protocol + "//" + window.location.host + "/" + className + ".html";
+			history.pushState({ path: newUrl }, '', newUrl);
 		}).fail(function () {
 			$("#page").html("Sorry, there was an error loading the content.");
 		});
@@ -60,7 +55,7 @@ $(document).ready(function () {
 					// Infogar det specifika innehållet i behållaren som är målet
 					$('#page').html(specificContent);
 
-					// Uppdatera aria-current-attributet på länken som har ett klassnamn döpt efter sidan
+					// Uppdatera aria-current-attributet
 					$('a').removeAttr('aria-current');
 					$('a.' + page).attr('aria-current', 'page');
 				}).fail(function () {
