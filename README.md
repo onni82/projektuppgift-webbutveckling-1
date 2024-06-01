@@ -8,6 +8,6 @@ Elev: Onni Bucht.
 
 ## 💫 Använda språk
 
-HTML och CSS.
+HTML, CSS och JS. JS användes för att ladda in webbsidorna dynamiskt.
 
 Projektet är baserat på [onnibucht](https://github.com/onni82/onnibucht/) som urspungligen skrevs med hjälp av React, Node.js och Gatsby.
